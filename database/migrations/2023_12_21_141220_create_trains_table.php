@@ -20,7 +20,7 @@ return new class extends Migration {
             $table->time('departure_time');
             $table->time('arrival_time');
             $table->string('train_code', 255)->unique();
-            $table->float('carriages', 3, 0);
+            $table->tinyInteger('carriages')->unsigned();
             $table->boolean('on_time')->default(true);
             $table->boolean('cancelled')->default(false);
             $table->timestamps();
