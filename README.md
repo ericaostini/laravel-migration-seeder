@@ -66,6 +66,9 @@ npm install
 
 # creo il database da phpmyadmin train_db
 
+#creo migration e file migration 
+php artisan make:migration create_trains_table
+
 # inserisco i dati per il collegamento al db in env
 
 # preparo le rotte file web.php es. 
