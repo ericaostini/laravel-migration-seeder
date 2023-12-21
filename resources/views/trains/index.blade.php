@@ -4,7 +4,10 @@
 
 @section('content')
     <main>
-        <h1>All Trains</h1>
+        <div class="d-flex mx-2">
+            <a href="{{ route('home') }}" class="btn btn-danger">Back</a>
+            <h3 class="mx-4">All Trains</h3>
+        </div>
         <div class="container">
             <div class="row">
                 @forelse ($trains as $train)
