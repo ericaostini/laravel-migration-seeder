@@ -26,8 +26,7 @@ class TrainsTableSeeder extends Seeder
             $newTrain->arrival_time = $faker->time();
             $newTrain->train_code = $faker->numerify('TR-####');
             $newTrain->carriages = $faker->numberBetween(3, 10);
-            $newTrain->on_time = $faker->boolean([true, false]);
-            $newTrain->cancelled = $faker->boolean([true, false]);
+            $newTrain->on_time = $faker->randomElement(['On Time', 'Delayed', 'Cancelled']);
             $newTrain->date = $faker->date();
             $newTrain->type = $faker->randomElement(['Regional Trains', 'Cargo Trains', 'High-Speed Trains', 'Local Trains']);
 

@@ -21,8 +21,7 @@ return new class extends Migration {
             $table->time('arrival_time');
             $table->string('train_code', 255)->unique();
             $table->tinyInteger('carriages')->unsigned();
-            $table->boolean('on_time')->default(true);
-            $table->boolean('cancelled')->default(false);
+            $table->tinyText('on_time');
             $table->timestamps();
         });
     }
