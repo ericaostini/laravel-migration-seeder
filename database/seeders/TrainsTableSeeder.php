@@ -18,19 +18,20 @@ class TrainsTableSeeder extends Seeder
     public function run(Faker $faker)
     {
         for ($i = 0; $i < 10; $i++) {
-            $train = new Train();
-            $train->company = $faker->company();
-            $train->departure_station = $faker->city();
-            $train->arrival_station = $faker->city();
-            $train->departure_time = $faker->time();
-            $train->arrival_time = $faker->time();
-            $train->train_code = $faker->numerify('TR-####');
-            $train->carriages = $faker->rnumberBetween(3, 10);
-            $train->in_time = $faker->boolean([true, false]);
-            $train->cancelled = $faker->boolean([true, false]);
-            $train->date = $faker->date();
-            $train->type = $faker->randomElement(['Regional Trains', 'Cargo Trains', 'High-Speed Trains', 'Local Trains']);
-            $train->save();
+            $newTrain = new Train();
+            $newTrain->company = $faker->company();
+            $newTrain->departure_station = $faker->city();
+            $newTrain->arrival_station = $faker->city();
+            $newTrain->departure_time = $faker->time();
+            $newTrain->arrival_time = $faker->time();
+            $newTrain->train_code = $faker->numerify('TR-####');
+            $newTrain->carriages = $faker->numberBetween(3, 10);
+            $newTrain->on_time = $faker->boolean([true, false]);
+            $newTrain->cancelled = $faker->boolean([true, false]);
+            $newTrain->date = $faker->date();
+            $newTrain->type = $faker->randomElement(['Regional Trains', 'Cargo Trains', 'High-Speed Trains', 'Local Trains']);
+
+            $newTrain->save();
         }
     }
 }
