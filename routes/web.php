@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TrainController;
+use App\http\Controllers\TodayTrainController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,3 +19,4 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 Route::get('/trains', [TrainController::class, 'index'])->name('trains.index');
+Route::get('/today-trains', [TodayTrainController::class, 'index'])->name('today-trains.index');
