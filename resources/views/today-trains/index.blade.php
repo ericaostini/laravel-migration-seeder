@@ -11,7 +11,7 @@
         <div class="container">
             <div class="row">
                 @foreach ($trains as $train)
-                    @if ($train->date == date('2023-12-21'))
+                    @if ($train->date == now()->format('Y-m-d'))
                         <div class="col-12 col-md-4 col-lg-4">
                             <div class="card">
                                 <div class="card-title bg-danger text-light p-3">
