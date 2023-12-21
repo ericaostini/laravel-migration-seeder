@@ -64,10 +64,9 @@ php artisan key:generate
 
 npm install
 
+# creo il database da phpmyadmin train_db
+
 # inserisco i dati per il collegamento al db in env
-
-# creo il database da phpmyadmin
-
 
 # preparo le rotte file web.php es. 
 Route::get('/books', [BookController::class, 'index'])->name('books.index');
